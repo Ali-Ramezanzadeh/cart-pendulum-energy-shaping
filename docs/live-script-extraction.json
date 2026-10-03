@@ -1,0 +1,13 @@
+{
+  "source": "models/Energy_Shaping.mlx",
+  "output": "scripts/Energy_Shaping.m",
+  "code_paragraphs": 5,
+  "code_sha256": [
+    "78cbba6ad0dc69fe913c9cb181c7ef1b63d813bfa048cee9793f4725fed2f275",
+    "07328f525ee33d9fe90faadcac5e8a900605b9b27fa811c7d4f1ccdf77376fc3",
+    "94f28db5a72a40c5bae9ae05c7ea06cdac2d81f0cd07ff204af8bd649297d1be",
+    "aa15f7a956a910c6b3f9d1dfa0d36b152093822577b3baba8bcf5f9489408c47",
+    "107443d4eed0c921738365df8359ae41a288609587fc7a0a4ca6d712ce178818"
+  ],
+  "method": "WordprocessingML body paragraphs; code preserved, narrative converted to MATLAB comments; figures/outputs not reproduced."
+}

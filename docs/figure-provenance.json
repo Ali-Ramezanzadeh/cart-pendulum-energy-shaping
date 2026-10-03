@@ -1,0 +1,152 @@
+{
+  "purpose": "Portable unchanged original plots for the concise English thesis report",
+  "source_root": "original/Thesis_AliRamezanzadeh",
+  "operation": "File copies only; no cropping, resizing, redrawing, recompression, or plot alteration",
+  "evidence_status": "Historical simulation figures supplied by the author; no simulations rerun or raw trajectories reconstructed",
+  "files": [
+    {
+      "source": "Images/Chapter5/States.png",
+      "filename": "local-states.png",
+      "scenario": "Local IDA-PBC stabilization",
+      "displayed_time_window": [
+        0,
+        10
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "Panels are titled Theta, Theta Dot, X, and X Dot. Units are not printed on the original axes. Model conventions imply radians, radians/second, metres, and metres/second respectively. Initial velocity ordering in the thesis text differs from the displayed curves; do not silently reconcile it.",
+      "caption": "Recorded local stabilization: angle, cart position, and velocities over the displayed 0–10 s window.",
+      "source_sha256": "35b6e10c0cde9eeb0bd73fd41c51e8a7ba84d9fc33d321966f3b62ecd0fd7247",
+      "destination_sha256": "35b6e10c0cde9eeb0bd73fd41c51e8a7ba84d9fc33d321966f3b62ecd0fd7247",
+      "byte_identical": true,
+      "bytes": 61064,
+      "pixel_dimensions": [
+        1902,
+        896
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/2/States.png",
+      "filename": "swingup-states.png",
+      "scenario": "Swing-up and stabilization",
+      "displayed_time_window": [
+        0,
+        20
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "Panels are titled Theta, Theta Dot, X, and X Dot. Units are not printed on the original axes. Model conventions imply radians, radians/second, metres, and metres/second respectively. Initial velocity ordering in the thesis text differs from the displayed curves; do not silently reconcile it. Angle jumps at approximately ±pi are display wrapping, not physical instantaneous rotation.",
+      "caption": "Recorded swing-up and stabilization: wrapped angle and cart response over 0–20 s, with cart reference 2.",
+      "source_sha256": "065e49e103791dee537309cccee4208606efd0cc75010cdbc9259574c4afe5e5",
+      "destination_sha256": "065e49e103791dee537309cccee4208606efd0cc75010cdbc9259574c4afe5e5",
+      "byte_identical": true,
+      "bytes": 66572,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/2/Inputs.png",
+      "filename": "swingup-inputs.png",
+      "scenario": "Swing-up and stabilization",
+      "displayed_time_window": [
+        0,
+        20
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "PFL Input (blue) is auxiliary acceleration u; Real Force (red dashed) is reconstructed Fx. Their physical units differ and the common original axis does not label units. Do not describe ±10 as a direct ±10 N force bound.",
+      "caption": "Auxiliary PFL command and reconstructed force over 0–20 s; the command reaches its +10 limit near transfer.",
+      "source_sha256": "a81c4f9778b58931109a95f07911a5e83d459fe45f507788ca1410d63ee81979",
+      "destination_sha256": "a81c4f9778b58931109a95f07911a5e83d459fe45f507788ca1410d63ee81979",
+      "byte_identical": true,
+      "bytes": 38516,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/2/Switch.png",
+      "filename": "swingup-switch.png",
+      "scenario": "Swing-up and stabilization",
+      "displayed_time_window": "approximately 5.3–6.1",
+      "time_unit": "seconds from thesis timing discussion; axis unit not printed",
+      "unit_notes": "Trigger and Alpha are dimensionless. The thesis reports trigger≈5.54 s and an approximately 50 ms transition; these are historical approximate values, not freshly measured timestamps.",
+      "caption": "Close-up of recorded trigger and continuous blend weight during controller transfer.",
+      "source_sha256": "fe01d815a8ee82c23be0c6a9a4f478ef5c157128f0d5d8d7d15c39b707951d5d",
+      "destination_sha256": "fe01d815a8ee82c23be0c6a9a4f478ef5c157128f0d5d8d7d15c39b707951d5d",
+      "byte_identical": true,
+      "bytes": 20992,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/3/States.png",
+      "filename": "disturbance-states.png",
+      "scenario": "Pulse disturbances and recovery",
+      "displayed_time_window": [
+        0,
+        50
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "Panels are titled Theta, Theta Dot, X, and X Dot. Units are not printed on the original axes. Model conventions imply radians, radians/second, metres, and metres/second respectively. Initial velocity ordering in the thesis text differs from the displayed curves; do not silently reconcile it. The cart curve drops below −6 before recovering; no finite-rail feasibility is established by this plot.",
+      "caption": "Recorded pulse-disturbance recovery over 0–50 s; the larger disturbance produces a substantial cart excursion.",
+      "source_sha256": "b86934a81618542b0dabbf9072e1ec125494f5046ee98c53ab9afce9cdc56b5e",
+      "destination_sha256": "b86934a81618542b0dabbf9072e1ec125494f5046ee98c53ab9afce9cdc56b5e",
+      "byte_identical": true,
+      "bytes": 63511,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/3/D.png",
+      "filename": "disturbance-pulses.png",
+      "scenario": "Pulse disturbances and recovery",
+      "displayed_time_window": [
+        0,
+        50
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "Disturbance-axis units are not printed. The text adds d to dot p1; do not label the amplitudes as motor forces in newtons without implementation evidence. Graphical reading suggests +3 during 10–10.5 s, +5 during 15–16 s, and −12 during 20–20.5 s. These are finite rectangular pulses, not Dirac impulses.",
+      "caption": "The three signed finite-duration disturbance pulses used in the recorded 0–50 s test.",
+      "source_sha256": "e0466f58dd52e38c8b633ca9312f1cb7836f274dd46051df2e2a0107d0fa774b",
+      "destination_sha256": "e0466f58dd52e38c8b633ca9312f1cb7836f274dd46051df2e2a0107d0fa774b",
+      "byte_identical": true,
+      "bytes": 17473,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    },
+    {
+      "source": "Images/Chapter5/Hd.png",
+      "filename": "local-energy.png",
+      "scenario": "Local IDA-PBC stabilization",
+      "displayed_time_window": [
+        0,
+        10
+      ],
+      "time_unit": "seconds according to thesis context; axis unit not printed",
+      "unit_notes": "The displayed signal is labelled Hd with no energy unit. It tends toward zero despite a nonzero minimum of the written unshifted Vd formula, so an offset/diagnostic convention needs verification. Do not label it absolute physical energy in joules. Visible transient rises mean its decay is not monotonic.",
+      "caption": "Recorded desired-energy diagnostic over 0–10 s, showing overall decay with transient rises.",
+      "source_sha256": "2a9639f285654fae656006aa582f6f99b1aec2cba4bc840a14b66a61aa2511d7",
+      "destination_sha256": "2a9639f285654fae656006aa582f6f99b1aec2cba4bc840a14b66a61aa2511d7",
+      "byte_identical": true,
+      "bytes": 24186,
+      "pixel_dimensions": [
+        1920,
+        926
+      ],
+      "format": "PNG"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "method": "Read-only inspection of original SLX/MLX ZIP/XML files; no MATLAB or Simulink execution.",
+  "models": [
+    {
+      "original_file": "Energy_Shaping.slx",
+      "saved_release": "R2022b",
+      "saved_matlab_version": "9.13.0.2049777",
+      "solver": "FixedStepAuto",
+      "step_seconds": "0.001",
+      "stop_time_seconds": "50",
+      "blocks_including_nested_and_commented": 257,
+      "embedded_matlab_function_count": 7,
+      "load_external_input": "off",
+      "load_initial_state": "off",
+      "custom_loading_initialization_callbacks_found": 0,
+      "archive_crc_passed": true
+    },
+    {
+      "original_file": "IDA_PBC.slx",
+      "saved_release": "R2022b",
+      "saved_matlab_version": "9.13.0.2049777",
+      "solver": "FixedStepAuto",
+      "step_seconds": "0.001",
+      "stop_time_seconds": "50",
+      "blocks_including_nested_and_commented": 519,
+      "embedded_matlab_function_count": 13,
+      "load_external_input": "off",
+      "load_initial_state": "off",
+      "custom_loading_initialization_callbacks_found": 0,
+      "archive_crc_passed": true
+    }
+  ],
+  "live_scripts": [
+    {
+      "original_file": "Energy_Shaping.mlx",
+      "code_paragraph_count": 5,
+      "archive_crc_passed": true,
+      "calls_simulation": false,
+      "plots_require_existing_out": true
+    }
+  ],
+  "IDA_PBC": {
+    "required_workspace_variables": {
+      "M_v": 1,
+      "m_v": 0.1,
+      "l_v": 0.5,
+      "q2": 1,
+      "q2_s": 2,
+      "phi_desired": 0
+    },
+    "hardcoded_coefficients": {
+      "a": 19.62,
+      "b": 2,
+      "g": 9.81
+    },
+    "controller_gains": {
+      "k": 0.2,
+      "m22_0": 0.2,
+      "P": 7,
+      "Kv": 1,
+      "k_E": 0.9,
+      "k_x": 0.5,
+      "k_v": 0.1
+    },
+    "nominal_ic_mux_order": [
+      "q1",
+      "q2",
+      "p1",
+      "p2"
+    ],
+    "nominal_ic_mux": [
+      "pi",
+      "q2",
+      0.2,
+      -0.4
+    ],
+    "actual_initialized_state_order": [
+      "theta",
+      "x",
+      "theta_dot",
+      "x_dot"
+    ],
+    "actual_initialized_state": [
+      "pi",
+      "q2",
+      -0.4,
+      0.2
+    ],
+    "source_wiring_references": {
+      "swapped_velocity_ics": "simulink/systems/system_642.xml, SIDs683->20 and684->503",
+      "cart_pulse_input": "system_root.xml SIDs668->670->673; system_642.xml SIDs676->686/688->562->20",
+      "Hd_mass_matrix": "simulink/systems/system_287.xml, SID765(tagMd)->759"
+    },
+    "switching": {
+      "active_chart": "chart_149.xml",
+      "distance": "abs(q1-phi_desired)",
+      "epsilon": "pi/2-0.9",
+      "delta": 0.03,
+      "blend": "cubic smoothstep",
+      "power_gate_active": false,
+      "velocity_gate_active": false
+    },
+    "clip_u": [
+      -10,
+      10
+    ],
+    "force_is_plant_input": false,
+    "reduced_dynamics": [
+      "theta_ddot=a*sin(theta)-b*cos(theta)*u+d_t",
+      "x_ddot=u+d_f"
+    ],
+    "three_pulse_channel": "cart acceleration d_f",
+    "three_pulses": [
+      {
+        "open_interval_seconds": [
+          10,
+          10.5
+        ],
+        "amplitude": 3
+      },
+      {
+        "open_interval_seconds": [
+          15,
+          16
+        ],
+        "amplitude": 5
+      },
+      {
+        "open_interval_seconds": [
+          20,
+          20.5
+        ],
+        "amplitude": -12
+      }
+    ],
+    "material_discrepancies": [
+      "Nominal initial velocities are swapped in the actual integrator connections.",
+      "Three pulses act on cart acceleration, whereas the thesis prose says angular acceleration.",
+      "Auxiliary u directly drives the reduced dynamics; computed Fx is a diagnostic rather than the plant input.",
+      "The coded z contains a2.302585 multiplier on the natural-log term, omitted from the thesis formula and coded analytic derivative.",
+      "Displayed Hd uses Md in its kinetic term, while the declared Hamiltonian and controller gradient use inverseMd.",
+      "No gyroscopic J2 matching term appears in the active controller.",
+      "Chapter4 changes the PFL angular input sign from plus to minus between physical derivation and compact design model."
+    ]
+  },
+  "Energy_Shaping": {
+    "required_workspace_variables": [
+      "M_v",
+      "m_v",
+      "l_v",
+      "theta_desired",
+      "K_LQR"
+    ],
+    "actual_initialized_state_order": [
+      "bottom_referenced_theta",
+      "x",
+      "theta_dot",
+      "x_dot"
+    ],
+    "actual_initialized_state": [
+      0.2,
+      0.4,
+      0,
+      3
+    ],
+    "role": "Ancillary force-driven energy/LQR hybrid prototype",
+    "lqr_state_order": [
+      "x",
+      "x_dot",
+      "upright_error_angle",
+      "theta_dot"
+    ],
+    "has_primary_IDA_u_clip": false
+  }
+}

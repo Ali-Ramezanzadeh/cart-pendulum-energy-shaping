@@ -1,0 +1,25 @@
+{
+  "method": "Independent NumPy/standard-library evaluation of stored equations. No trajectory, MATLAB, or Simulink execution.",
+  "evaluation_point": {
+    "q1": 0.2,
+    "q2": 1.2,
+    "q2_star": 2,
+    "a": 19.62,
+    "b": 2,
+    "k": 0.2,
+    "m22_0": 0.2,
+    "P": 7,
+    "p": [
+      0.2,
+      -0.4
+    ]
+  },
+  "inverse_matrix_identity_max_abs_error": 1.1102230246251565e-15,
+  "dMd_finite_difference_max_abs_error": 2.966604739640388e-11,
+  "coded_Vd_q1_derivative_finite_difference": 54.48591578982587,
+  "controller_used_dVdq1": 47.45861167312513,
+  "coded_Vd_q1_gradient_mismatch": -7.027304116700741,
+  "plot_kinetic_term_using_Md": 0.03607026699539416,
+  "defined_Hd_kinetic_term_using_inverse_Md": 0.7019123079725937,
+  "positive_definiteness_note": "For k=m22_0>0 and cos(q1)>0, det(Md)=k^2*b^2*cos(q1)^4/12>0 and Md11>0. Equality remains positive definite inside the open upright hemisphere, although it does not satisfy the thesis stricter stated sufficient condition m22_0>k."
+}

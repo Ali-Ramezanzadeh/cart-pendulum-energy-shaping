@@ -1,0 +1,14 @@
+* text=auto
+*.m text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.slx binary
+*.mlx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+# Preserve historical source bytes as recorded in the original-file manifest.
+reports/original/** -text
+

@@ -1,0 +1,36 @@
+# MATLAB/Simulink generated files
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.m~
+*_ert_rtw/
+*_grt_rtw/
+codegen/
+
+# LaTeX build files; committed report PDFs remain visible
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.blg
+*.idx
+*.ind
+*.ilg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+
+# Local archives and transient data
+*.rar
+*.zip
+tmp/
+.DS_Store
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the author and original thesis when referring to this project."
+type: software
+title: "Cart–Pendulum Energy Shaping"
+authors:
+  - family-names: "Ramezanzadeh"
+    given-names: "Ali"
+abstract: "Thesis project materials for energy-based cart–pendulum swing-up and local stabilization in MATLAB/Simulink, including a concise English LaTeX report."
+keywords:
+  - nonlinear control
+  - energy shaping
+  - IDA-PBC
+  - cart-pendulum
+  - MATLAB
+  - Simulink
+
